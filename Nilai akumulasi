@@ -1,0 +1,28 @@
+Majemuk <-function (k,i,t) {
+  akumulasi=k*(1+i)^t
+  return(akumulasi)
+}
+
+Majemuk_nominal <-function (k,i,t,m){
+  nominal=k*(1+(i/m))^(m*t)
+  return(nominal)
+}
+
+pilih <- switch(3, "Bunga Tunggal", "Bunga Majemuk Nominal", "Bunga Majemuk Kontinu")
+print(bunga)
+
+bunga <- function(num,k,i,t,m)
+  switch(num, 
+         satu = {
+           tunggal = k*(1+i*t)
+           print(tunggal)
+         },
+         dua = {
+           majemuk=k*(1+(i/m))^(m*t)
+           print(majemuk)
+         },
+         tiga = {
+           kontinu=k*exp(i*t)
+           print(kontinu)
+         }
+  )
