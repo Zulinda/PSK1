@@ -1,0 +1,20 @@
+setwd("E:\\KULIAH\\SEMESTER 4\\PSK R\\R Baru")
+nilaiakumulasi<-function(k,i,t){
+  A = k*((1+i)^t)
+  return(A)
+}
+
+#nilai akumulasi majemuk
+nilaiakumulasi<-function(k,i,t){
+  A = k*(1+i)^t
+  return(A)
+}
+
+
+#majemuk nominal
+nilaiaknom<-function(k,i,t,m){
+  mnom = k*(1+i/m)^(m*t)
+  return(mnom)
+}
+
+ 
