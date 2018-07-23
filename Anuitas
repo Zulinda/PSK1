@@ -1,0 +1,24 @@
+setwd("E:\\KULIAH\\SEMESTER 4\\PSK R")
+annuitas <-function (num,i,n,k,t, m=TRUE)
+{
+  j=i/m
+  n=m*t
+  v=1/(1+j)
+ switch(num,
+         satu ={
+          
+           pvakhir= k*(1-v^n)/j
+           cat("Nilai present value dari annuitas akhir sebesar:",pvakhir,"\n")
+           snakhir = k*(((1+j)^n-1)/j)
+           cat ("Nilai akumulasi dari annuits akhir sebesar:",snakhir,"\n")
+           
+         },
+         dua= {
+      
+  pvawal= (k*(1-v^n))/(j*v)
+           cat ("Nilai present value dari annuitas awal sebesar :", pvawal,"\n")
+           snawal=k*(((1+j)^n)-1)/(j*v)
+           cat("NIlai akumulasi dari annuitas awal sebesar :", snawal,"\n")}
+  )
+}
+
