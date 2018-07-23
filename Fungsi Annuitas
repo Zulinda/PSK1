@@ -1,0 +1,18 @@
+setwd("E:\\KULIAH\\SEMESTER 4\\PSK R\\R Baru")
+#Fungsi Annuitas
+annuitas<- function(num,i,n=TRUE,k,v=1/(1+i))
+switch(num, 
+       satu = {
+         an = k*(1-(v^n))/i
+         cat("present value annuitas akhir :",an,"\n")
+         sn = k*(((1+i)^n)-1)/i
+         cat("nilai akumulasi annuitas akhir :",sn)
+       },
+       dua = {
+         an = k*(1-(v^n))/(i*v)
+         cat("present value annuitas awal :",an,"\n")
+         sn = k*(((1+i)^n)-1)/(i*v) 
+         cat("nilai akumulasi annuitas awal :",sn)
+       }
+)
+
