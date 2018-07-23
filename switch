@@ -1,0 +1,18 @@
+setwd("E:\\KULIAH\\SEMESTER 4\\PSK R\\R Baru")
+pilih <- function(num, a, b)
+  switch(num, 
+         satu = {
+           kali = a*b
+           print(kali)
+         },
+         dua = {
+           bagi = a/b
+           print(bagi)
+         }
+  )
+
+#ujicoba
+pilih("dua", 10, 1)
+pilih(1, 2, 5)
+pilih("dua", 10, 5)
+pilih("satu", 10, 5)
